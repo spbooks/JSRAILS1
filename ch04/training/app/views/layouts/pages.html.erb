@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag    "application", :media => "all", "data-turbolinks-track" => true%>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+         <a class="brand">Jump Start Rails</a>
+      </div>        
+     </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span3">
+        <%= render "/shared/menu" %>
+      </div>
+      <div class="span9">
+        <%= yield %>
+      </div>
+    </div>
+    <hr/>
+    <footer></footer>
+  </div>
+  
+</body>
+</html>

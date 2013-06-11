@@ -1,0 +1,16 @@
+<%
+meta :title => @post.title,
+     :description => @post.blurb,
+     :keywords => %w(rails ruby on rails Rails jump start rails)
+%>
+<p>
+  <strong>Title:</strong> <%= @post.title %>
+</p>
+<p>
+  <p class='pull-left'><%= image_tag @post.image_url.to_s %></p>
+</p>
+<p>
+  <%= @post.content %>
+</p>
+
+<%= link_to "Back", posts_path %>

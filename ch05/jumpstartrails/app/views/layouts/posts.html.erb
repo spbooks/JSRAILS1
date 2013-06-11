@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= metamagic :title => "My default title", :description => "My default description.", :keywords => %w(keyword1 keyword2 keyword3) %>
+  <%= stylesheet_link_tag    "posts", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="masthead">
+    <h3 class="muted">Jump Start Rails</h3>
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <ul class="nav">
+                <%= nav_link 'Home', root_path %>
+                <%= nav_link 'About', about_path %>
+                <%= nav_link 'Blog', posts_path, true %>
+              </ul>
+          </div>
+        </div>
+      </div><!-- /.navbar -->
+    </div>
+
+    <%= yield %>
+    <hr />
+    <div class="footer">
+      <p>&copy; Jump Start Rails 2013</p>
+    </div>
+  </div> <!-- /container -->
+
+</body>
+</html>

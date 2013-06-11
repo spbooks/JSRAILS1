@@ -1,0 +1,21 @@
+<div class="hero-unit">
+    <h2>Latest post: <%= @latest.title %></h2>
+    <p><%= @latest.blurb %></p>
+    <p>
+        <%= link_to 'Read Post', @latest, :class => "btn btn-primary btn-large" %>
+    </p>
+</div>
+<h1>Posts</h1>
+
+<table class="table table-bordered">
+    <% @posts.each do |post| %>
+    <tr>
+        <td style="width:100px;"><%= image_tag post.image_url(:thumb).to_s %></td>
+        <td>
+            <strong><%= post.title %></strong><br />
+            <%= post.blurb %><br />
+            <%= link_to 'Read Post', post %>
+        </td>
+    </tr>
+    <% end %>
+</table>
