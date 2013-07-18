@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Jumpstartrails::Application.config.secret_key_base = '601261bc28c0fbd9424c07b7263c516cf29dcdfb88e1c692e6bfcfd185d01f2f6fc30fb01be075e1624f7cb6aafa28db20b51e0fee42415f21de891a865220d2'
+Jumpstartrails::Application.config.secret_key_base = 'bac9f1f1ef5cf4be9d9811ffb0b3532bc93acc55e16f6e97d4ff51288eaf3d856cb547b816c8856f1a788b62a4f4834e930bac83fc4cc204aaf1da29e0d69792'

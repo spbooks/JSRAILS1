@@ -1,18 +1,17 @@
 Jumpstartrails::Application.routes.draw do
   
-  
+  get "posts/index"
+  get "posts/show"
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :pages
-
   resources :posts
 
   %w[about contact cv].each do |page|
     get page, :controller => 'pages', :action => page
   end
 
-  root :to => 'pages#index'
-
+  root "pages#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,6 +52,13 @@ Jumpstartrails::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
+  
+  # Example resource route with concerns:
+  #   concern :toggleable do
+  #     post 'toggle'
+  #   end
+  #   resources :posts, concerns: :toggleable
+  #   resources :photos, concerns: :toggleable
 
   # Example resource route within a namespace:
   #   namespace :admin do

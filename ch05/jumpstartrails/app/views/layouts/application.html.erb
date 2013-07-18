@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= metamagic :title => "JumpStartRails", :description => "My Blog about Rails", :keywords => %w(rails ruby ruby on rails Rails) %>
+  <title>Jumpstartrails</title>
+  <%= metamagic title: "My default title", 
+    description: "My default description.", 
+    keywords: %w(rails ruby Ruby on Rails) %>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>

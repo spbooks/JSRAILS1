@@ -1,4 +1,22 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
-<p><%= @notice %></p>
-<p><%= link_to "About", '/about' %></p>
+<h1>Listing pages</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Slug</th>
+      <th>Content</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @pages.each do |page| %>
+    <tr>
+      <td><%= page.title %></td>
+      <td><%= page.slug %></td>
+      <td><%= page.content %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

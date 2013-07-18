@@ -1,5 +1,6 @@
 Training::Application.routes.draw do
   resources :posts
+  resources :pages
 
   %w[about contact cv].each do |page|
     get page, :controller => 'pages', :action => page

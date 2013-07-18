@@ -8,14 +8,20 @@
 <h1>Posts</h1>
 
 <table class="table table-bordered">
-    <% @posts.each do |post| %>
-    <tr>
-        <td style="width:100px;"><%= image_tag post.image_url(:thumb).to_s %></td>
-        <td>
-            <strong><%= post.title %></strong><br />
-            <%= post.blurb %><br />
-            <%= link_to 'Read Post', post %>
-        </td>
+  <% @posts.each do |post| %>
+  <tr>
+    <td style="width:100px;"><%= image_tag post.image_url(:thumb).to_s %></td>
+      <td>
+        <div>
+          <strong><%= post.title %></strong><br />
+            <p class="blurb_target">
+              <a href="#">Show/hide blurb</a>
+            </p>
+         </div>
+         <p class="blurb_content"><%= post.blurb %></p>
+         <%= link_to 'Read Post', post %>
+      </td>
     </tr>
-    <% end %>
+  <% end %>
 </table>
+<a href="#" id="test_click">Just testing</a>

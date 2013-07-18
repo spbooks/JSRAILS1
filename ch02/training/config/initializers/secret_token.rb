@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Training::Application.config.secret_key_base = '999b304f16ef77ce88d9fa012fdb835644f141b74f1dd9dc3c06d9f0e52e872654676306fe0ba9f9eb902b81363df3066812009224472136f8ac270be8f1635d'
+Training::Application.config.secret_key_base = 'a77e385d57f5c146d855b2d6fd801f307cb5a720a82678efe9a22f7e650fc71ad3adf579648cf1139712e5efecc6d6fa69e3ffbc2c8849250a4395320dd2ceba'

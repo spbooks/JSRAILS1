@@ -1,6 +1,25 @@
-<%
-meta :title => "My Title",
-     :description => "The Jump Start Rails App",
-     :keywords => %w(rails ruby on rails Rails)
-%>
-<%= @page.content.html_safe %>
+<h1>Listing pages</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Slug</th>
+      <th>Content</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @pages.each do |page| %>
+    <tr>
+      <td><%= page.title %></td>
+      <td><%= page.slug %></td>
+      <td><%= page.content %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New Page", new_page_path %>
+
